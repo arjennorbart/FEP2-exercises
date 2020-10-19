@@ -6,7 +6,7 @@ Dit is de repository die hoort bij de exercises van het vak TICT-SV2FEP2-20.
 
 ```sh
 git clone https://github.com/TICT-SV2FEP2-20/exercises.git
-cd TICT-SV2FEP2-20-exercises
+cd exercises
 ```
 
 ### Dependencies
