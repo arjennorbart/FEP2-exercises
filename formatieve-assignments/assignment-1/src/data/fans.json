@@ -1,0 +1,13 @@
+{
+  "id": "fans",
+  "name": "Fans",
+  "products": [
+    { "id": "109", "type": "1", "variant": "red", "price": 100 },
+    { "id": "110", "type": "1", "variant": "purple", "price": 100 },
+    { "id": "111", "type": "1", "variant": "yellow", "price": 100 },
+
+    { "id": "113", "type": "2", "variant": "yellow", "price": 110 },
+    { "id": "114", "type": "2", "variant": "red", "price": 110 },
+    { "id": "115", "type": "2", "variant": "purple", "price":1100 }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "consumables",
+  "name": "Consumables",
+  "products": [
+    { "id": "129", "type": "1", "variant": "purple", "price": 50 },
+    { "id": "130", "type": "1", "variant": "blue", "price": 50 },
+    { "id": "131", "type": "1", "variant": "orange", "price": 50 },
+
+    { "id": "133", "type": "2", "variant": "green", "price": 60 },
+    { "id": "134", "type": "2", "variant": "blue", "price": 60 },
+    { "id": "135", "type": "2", "variant": "purple", "price": 60 },
+
+    { "id": "137", "type": "3", "variant": "wide", "price": 70 },
+    { "id": "138", "type": "3", "variant": "heart", "price": 70 },
+    { "id": "139", "type": "3", "variant": "cross", "price": 70 }
+  ]
+}

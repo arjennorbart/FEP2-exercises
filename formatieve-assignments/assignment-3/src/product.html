@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Weapons Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@515&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <app-root>
+      <view-product></view-product>
+    </app-root>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module">
+      import getData from './utils/get-data.js'
+      import store from './store/index.js'
+      import { saveProducts } from './store/products.js'
+
+      const viewProduct = document.querySelector('view-product')
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get('category');
+      const id = urlParams.get('id');
+
+      viewProduct.setAttribute('id', id)
+      viewProduct.setAttribute('category', category)
+
+      getData(category)
+        .then(categoryData => store.dispatch(saveProducts( [categoryData] )))
+
+    </script>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+  </body>
+</html>

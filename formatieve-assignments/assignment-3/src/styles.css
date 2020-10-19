@@ -1,0 +1,21 @@
+:root {
+  --spacing-half: 1rem;
+  --spacing-default: 2rem;
+  --spacing-double: 4rem;
+
+  --background-color: #533A46;
+  --text-color: white;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  font-family: 'Fira Code', monospace;
+}

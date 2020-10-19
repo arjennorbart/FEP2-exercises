@@ -1,0 +1,25 @@
+{
+  "id": "staffs",
+  "name": "Staffs",
+  "products": [
+    { "id": "69", "type": "1", "variant": "cyan", "price": 900 },
+    { "id": "70", "type": "1", "variant": "yellow", "price": 900 },
+    { "id": "71", "type": "1", "variant": "pink", "price": 900 },
+
+    { "id": "73", "type": "2", "variant": "red", "price": 1000 },
+    { "id": "74", "type": "2", "variant": "cyan", "price": 1000 },
+    { "id": "75", "type": "2", "variant": "purple", "price": 1000 },
+
+    { "id": "77", "type": "3", "variant": "yellow", "price": 1100 },
+    { "id": "78", "type": "3", "variant": "red", "price": 1100 },
+    { "id": "79", "type": "3", "variant": "pink", "price": 1100 },
+
+    { "id": "81", "type": "4", "variant": "blue", "price": 1200 },
+    { "id": "82", "type": "4", "variant": "purple", "price": 1200 },
+    { "id": "83", "type": "4", "variant": "lime", "price": 1200 },
+
+    { "id": "85", "type": "5", "variant": "yellow", "price": 1500 },
+    { "id": "86", "type": "5", "variant": "red", "price": 1500 },
+    { "id": "87", "type": "5", "variant": "purple", "price": 1500 }
+  ]
+}

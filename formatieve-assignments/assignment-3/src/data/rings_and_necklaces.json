@@ -1,0 +1,29 @@
+{
+  "id": "rings_and_necklaces",
+  "name": "Rings and Necklaces",
+  "products": [
+    { "id": "1", "type": "1", "variant": "cyan", "price": 20 },
+    { "id": "2", "type": "1", "variant": "blue", "price": 20 },
+    { "id": "3", "type": "1", "variant": "purple", "price": 20 },
+
+    { "id": "5", "type": "2", "variant": "closed", "price": 50 },
+    { "id": "6", "type": "2", "variant": "horned", "price": 50 },
+    { "id": "7", "type": "2", "variant": "open", "price": 50 },
+
+    { "id": "9", "type": "3", "variant": "green", "price": 100 },
+    { "id": "10", "type": "3", "variant": "blue", "price": 100 },
+    { "id": "11", "type": "3", "variant": "pink", "price": 100 },
+
+    { "id": "13", "type": "4", "variant": "green", "price": 200 },
+    { "id": "14", "type": "4", "variant": "blue", "price": 200 },
+    { "id": "15", "type": "4", "variant": "pink", "price": 200 },
+
+    { "id": "17", "type": "5", "variant": "yellow", "price": 500 },
+    { "id": "18", "type": "5", "variant": "red", "price": 500 },
+    { "id": "19", "type": "5", "variant": "purple", "price": 500 },
+
+    { "id": "21", "type": "6", "variant": "cyan", "price": 700 },
+    { "id": "22", "type": "6", "variant": "purple", "price": 700 },
+    { "id": "23", "type": "6", "variant": "red", "price": 700 }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "slingshots",
+  "name": "Slingshots",
+  "products": [
+    { "id": "141", "type": "1", "variant": "brown", "price": 30 },
+    { "id": "142", "type": "1", "variant": "silver", "price": 30 },
+    { "id": "143", "type": "1", "variant": "purple", "price": 30 },
+
+    { "id": "145", "type": "2", "variant": "cyan", "price": 35 },
+    { "id": "146", "type": "2", "variant": "purple", "price": 35 },
+    { "id": "147", "type": "2", "variant": "green", "price": 35 }
+  ]
+}

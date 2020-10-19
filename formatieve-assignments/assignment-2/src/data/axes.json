@@ -1,0 +1,25 @@
+{
+  "id": "axes",
+  "name": "Axes",
+  "products": [
+    { "id": "89", "type": "1", "variant": "blue", "price": 900 },
+    { "id": "90", "type": "1", "variant": "green", "price": 900 },
+    { "id": "91", "type": "1", "variant": "yellow", "price": 900 },
+
+    { "id": "93", "type": "2", "variant": "blue", "price": 900 },
+    { "id": "94", "type": "2", "variant": "red", "price": 900 },
+    { "id": "95", "type": "2", "variant": "purple", "price": 900 },
+
+    { "id": "97", "type": "3", "variant": "yellow", "price": 900 },
+    { "id": "98", "type": "3", "variant": "purple", "price": 900 },
+    { "id": "99", "type": "3", "variant": "red", "price": 900 },
+
+    { "id": "101", "type": "4", "variant": "blue", "price": 900 },
+    { "id": "102", "type": "4", "variant": "green", "price": 900 },
+    { "id": "103", "type": "4", "variant": "pink", "price": 900 },
+
+    { "id": "105", "type": "5", "variant": "blue", "price": 900 },
+    { "id": "106", "type": "5", "variant": "pink", "price": 900 },
+    { "id": "107", "type": "5", "variant": "green", "price": 900 }
+  ]
+}

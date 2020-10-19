@@ -1,0 +1,17 @@
+{
+  "id": "tridents",
+  "name": "Tridents",
+  "products": [
+    { "id": "117", "type": "1", "variant": "blue", "price": 500 },
+    { "id": "118", "type": "1", "variant": "green", "price": 500 },
+    { "id": "119", "type": "1", "variant": "yellow", "price": 500 },
+    
+    { "id": "121", "type": "2", "variant": "blue", "price": 12000 },
+    { "id": "122", "type": "2", "variant": "green", "price": 12000 },
+    { "id": "123", "type": "2", "variant": "purple", "price": 12000 },
+    
+    { "id": "125", "type": "3", "variant": "blue", "price": 1000000 },
+    { "id": "126", "type": "3", "variant": "red", "price": 1000000 },
+    { "id": "127", "type": "3", "variant": "green", "price": 1000000 }
+  ]
+}

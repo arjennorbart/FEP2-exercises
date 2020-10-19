@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Weapons Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@515&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <app-root>
+      <view-cart></view-cart>
+    </app-root>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module">
+      import store from './store/index.js'
+      import { saveProducts } from './store/products.js'
+      import getData from "./utils/get-data.js";
+
+      const productsInCart = store.getState().cart;
+      const idsInCart = productsInCart.map(product => product.id)
+      const categoriesInCart = productsInCart.map(product => product.category)    
+      const categoriesSet = new Set(categoriesInCart)
+      const categories = Array.from(categoriesSet)
+      const categoryDataPromises = categories.map(category => getData(category))
+
+      const categoriesData = Promise.all(categoryDataPromises)
+        .then(categories => categories.map(({products: productsInCategory, ...category}) => {
+          const filteredProducts = productsInCategory.filter(product => idsInCart.includes(product.id))
+          return {...category, products: filteredProducts } 
+        }))
+        .then(productsData => store.dispatch(saveProducts(productsData)))
+
+    </script>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+  </body>
+</html>
