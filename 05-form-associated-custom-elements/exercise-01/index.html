@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>My Counter</h1>
+  </header>
+
+  <main>
+
+    <p>
+      This browser <strong id="detect">does not</strong> implement Form Associated Custom Elements
+  </p>
+
+  <script>
+      const detect = document.querySelector('#detect');
+      if ('attachInternals' in HTMLElement.prototype) {
+          detect.textContent = 'does';
+      }
+  </script>
+
+  <form action="https://www.example.com/" method="post">
+
+      <label for="record">How many units do you want to order? </label>
+      <my-counter
+        id="units"
+        name="units"
+        required
+        step="4">
+      </my-counter>
+      <br>
+
+      <button type="reset">
+          Reset form
+      </button>
+      <button type="submit">
+          Submit
+      </button>
+
+  </form>
+
+  </main>
+
+</body>
+
+</html>

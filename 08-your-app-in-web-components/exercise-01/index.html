@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="components/app-header/app-header.js"></script>
+  <script type="module" src="components/app-navigation/app-navigation.js"></script>
+  <script type="module" src="components/to-do/to-do-app.js"></script>
+  <script type="module" src="components/app-footer/app-footer.js"></script>
+</head>
+
+<style>
+
+  main > * {
+    display: block;
+    background-color: #dedede;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+</style>
+
+<body>
+
+  <main>
+    <app-header></app-header>
+    <app-navigation></app-navigation>
+    <to-do-list></to-do-list>
+    <app-footer></app-footer>
+  </main>
+
+</body>
+
+</html>

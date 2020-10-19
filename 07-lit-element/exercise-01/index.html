@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <main>
+
+    <to-do-list></to-do-list>
+
+  </main>
+
+  <script>
+    const app = document.querySelector('to-do-list');
+    import('./to-do-list.js').then(() => {
+      app.todos = [
+        { text: 'Read a book', checked: true },
+        { text: 'Finish assignments', checked: false },
+        { text: 'Walk the dog', checked: false },
+        { text: 'Make lunch', checked: false },
+      ];
+    });
+  </script>
+</body>
+
+</html>
