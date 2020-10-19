@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+  to-do-list {
+    display: block;
+    font-family: sans-serif;
+  }
+
+  to-do-list ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  to-do-list input {
+    font-size: 1em;
+    padding: 0.5em;
+    border: 2px solid #323232;
+    border-radius: 2px;
+  }
+
+  to-do-list button {
+    background-color: #104436;
+    border: 2px solid #08221b;
+    border-radius: 2px;
+    color: white; 
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+
+  to-do-item {
+    display: block;
+    font-family: sans-serif;
+  }
+
+  to-do-item .completed {
+    text-decoration: line-through;
+  }
+</style>
+
+<body>
+
+  <main>
+
+    <to-do-list></to-do-list>
+
+  </main>
+
+  <script>
+    const list = document.querySelector('to-do-list');
+    import('./to-do-list.js').then(() => {
+      list.todos = [
+        { text: 'Read a book', checked: true },
+        { text: 'Finish assignments', checked: false },
+        { text: 'Walk the dog', checked: false },
+        { text: 'Make lunch', checked: false },
+      ];
+    });
+  </script>
+</body>
+
+</html>
