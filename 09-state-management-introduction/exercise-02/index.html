@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components - State management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    main > * {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    button {
+      font-family: monospace;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header button {
+      align-self: flex-start;
+    }
+
+    aside {
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100vh;
+      padding: 1rem;
+      position: absolute;
+      text-align: right;
+      background-color: red;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    aside[data-show] {
+      transform: translateX(0%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Counter: <output></output></h1>
+    <button data-menu-open>Menu</button>
+  </header>
+
+  <main>
+    <button data-reset>Reset</button>
+    <button data-decrease>Decrease</button>
+    <button data-increase>Increase</button>
+    <button data-increase-10>Increase by 10</button>
+  </main>
+
+  <aside>
+    <button data-menu-close>Close</button>
+  </aside>
+
+  <script type="module">
+    import createStore from './store.js'
+    import reducer from './reducer.js'
+    import counter from './actions.counter.js'
+    import menu from './actions.menu.js'
+
+    const store = createStore(reducer)
+    
+    function render() {
+      const state = store.getState()
+      document.querySelector('output').innerText = state.counter
+
+      if (state.menu === true) {
+        document.querySelector('aside').setAttribute('data-show', '')
+      } else {
+        document.querySelector('aside').removeAttribute('data-show')
+      }
+    }
+
+    document.querySelector('[data-reset]').addEventListener('click', () => {
+      store.dispatch(counter.reset())
+    })
+    
+    document.querySelector('[data-decrease]').addEventListener('click', () => {
+      store.dispatch(counter.decrement())
+    })
+    
+    document.querySelector('[data-increase]').addEventListener('click', () => {
+      store.dispatch(counter.increment())
+    })
+    
+    document.querySelector('[data-increase-10]').addEventListener('click', () => {
+      store.dispatch(counter.increment(10))
+    })
+
+    document.querySelector('[data-menu-open]').addEventListener('click', () => {
+      store.dispatch(menu.open())
+    })
+
+    document.querySelector('[data-menu-close]').addEventListener('click', () => {
+      store.dispatch(menu.close())
+    })
+
+    render()
+    store.subscribe(render)
+  </script>
+
+</body>
+
+</html>

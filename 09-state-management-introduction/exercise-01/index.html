@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Web Components - State management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    main > * {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    button {
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Counter: <output></output></h1>
+  </header>
+
+  <main>
+    <button data-reset>Reset</button>
+    <button data-decrease>Decrease</button>
+    <button data-increase>Increase</button>
+    <button data-increase-10>Increase by 10</button>
+  </main>
+
+  <script type="module">
+    import createStore from './store.js'
+    import reducer from './reducer.js'
+    import actions from './actions.js'
+
+    const store = createStore(reducer)
+    
+    function render() {
+      document.querySelector('output').innerText = store.getState()
+    }
+
+    document.querySelector('[data-reset]').addEventListener('click', () => {
+      store.dispatch(actions.reset())
+    })
+    
+    document.querySelector('[data-decrease]').addEventListener('click', () => {
+      store.dispatch(actions.decrement())
+    })
+    
+    document.querySelector('[data-increase]').addEventListener('click', () => {
+      store.dispatch(actions.increment())
+    })
+    
+    document.querySelector('[data-increase-10]').addEventListener('click', () => {
+      store.dispatch(actions.increment(10))
+    })
+
+    render()
+    store.subscribe(render)
+  </script>
+
+</body>
+
+</html>

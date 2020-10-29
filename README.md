@@ -20,6 +20,6 @@ Deze repo is opgezet als een monorepo: elke les heeft z'n eigen directory en elk
 
 ### Usage
 
-- Ga naar de gewenste directory, e.g. `cd 02/custom-elements`
+- Ga naar de gewenste directory, e.g. `cd 02-custom-elements`
 - Installeer de node modules met `npm i`
 - run `npm start`
