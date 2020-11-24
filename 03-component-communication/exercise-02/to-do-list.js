@@ -13,6 +13,22 @@ class TodoList extends HTMLElement {
     connectedCallback() {
         this.appendChild(template.content.cloneNode(true))
     }
+
+    set todos(value) {
+        this._todos = value;
+        this._renderList();
+    }
+
+    get todos() {
+    }
+
+    _renderList() {
+        this._todos.forEach((todoItem, index) => {
+            let $todoItem = document.createElement("li");
+            $todoItem.innerHTML = `${todoItem.text}`;
+            this.querySelector("#todos").appendChild($todoItem);
+        })
+    }
 }
 
 window.customElements.define('to-do-list', TodoList);

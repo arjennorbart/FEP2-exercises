@@ -23,20 +23,23 @@ class ToDoList extends HTMLElement {
                 text: this.querySelector('input').value, 
                 checked: false 
             })
+
             this._renderTodoList();
             this.querySelector('input').value = '';
         }
     }
 
     _toggleTodo(event) {
-
+        const item = this._todos[event.detail];
+        item.checked = !item.checked;
+        this._renderTodoList();
     }
 
     _renderTodoList() {
         this.querySelector('#todos').innerHTML = '';
-
         this._todos.forEach((todo, index) => {
             let $todoItem = document.createElement('to-do-item');
+            $todoItem.addEventListener('toggleToDo', evt => this._toggleTodo(evt))
             $todoItem.setAttribute('text', todo.text);
             // if the to do is checked, set the attribute, else; omit it.
             if (todo.checked) {

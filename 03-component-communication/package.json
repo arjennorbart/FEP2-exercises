@@ -1,0 +1,18 @@
+{
+  "name": "02-custom-elements",
+  "version": "1.0.0",
+  "description": "Schrijf een eerste bruikbare Web Component, genaamd <light-bulb>. Het component moet de volgende\r HTML bevatten:",
+  "main": "index.js",
+  "dependencies": {
+    "@polymer/paper-input": "^3.2.1"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.57.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
